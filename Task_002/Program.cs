@@ -10,14 +10,16 @@ int ReadInt(string text)
 } 
   
 void PrintSumNumbers(int M, int N)
-{
+{ 
+    int start = Math.Min (M, N);
+    int end = Math.Max (M, N);
     int sum = 0;
 
-    for (int i = M; i <= N; i++)
+    for (int i = start; i <= end; i++)
     {
          sum += i;
     }
-    
+
     Console.WriteLine("Сумма натуральных чисел: " + sum);
 }
 
@@ -26,5 +28,4 @@ void PrintSumNumbers(int M, int N)
 int M = ReadInt("Введите число M: ");
 int N = ReadInt("Введите число N: ");
 PrintSumNumbers(M, N);
-
 
